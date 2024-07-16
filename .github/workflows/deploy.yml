@@ -34,8 +34,8 @@ jobs:
     - name: Deploy to AWS Lambda
       uses: aws-actions/aws-lambda-deploy@v1
       with:
-        aws-access-key-id: ${{ ASIAYLONDJ5VXXBTIYX3 }}
-        aws-secret-access-key: ${{ 1oZE1gZF8nM1wm5y9kAs10mKykesupYo89MgK0R4 }}
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: 'us-east-1'
         function-name: 'lambda_function'
         zip-file: 'lambda_function.zip'
